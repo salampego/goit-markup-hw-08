@@ -27,11 +27,7 @@
         <a href="./index.html" class="header__logo link"
           >Web<span class="header-logo__item">Studio</span></a
         >
-        <button class="header__burger-btn">
-          <svg class="header__icon-burger">
-            <use href="./images/burger.svg#icon-burger"></use>
-          </svg>
-        </button>
+
         <nav class="header__nav">
           <ul class="header-nav__list">
             <li class="header-nav__item">
@@ -69,6 +65,16 @@
             >
           </li>
         </ul>
+        <button class="header__burger-btn" data-menu-open>
+          <svg class="header__icon-burger">
+            <use href="./images/burger.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <div class="header-menu__backdrop is-open" data-menu>
+          <div class="header-menu__modal">
+            <button data-menu-close></button>
+          </div>
+        </div>
       </div>
     </header>
     <!-- <main> -->
@@ -703,5 +709,6 @@
       </div>
     </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
