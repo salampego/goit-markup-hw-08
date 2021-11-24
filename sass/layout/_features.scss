@@ -42,3 +42,28 @@
     margin-right: 0;
   }
 }
+@media screen and (max-width: 767px) {
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .features .item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+  .features-block {
+    width: 450px;
+  }
+  .features-heading {
+    text-align: center;
+  }
+  .features-paragraph {
+    width: 450px;
+  }
+}

@@ -13,6 +13,7 @@
   background-color: var(--background-hero);
   letter-spacing: 0.06em;
   margin: 0 auto;
+  width: 100%;
 }
 .hero-heading {
   margin-top: 0;
@@ -26,4 +27,28 @@
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .hero-heading {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 360px;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+@media not all,
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(/images/hero-phone.jpg);
+    margin: 0 auto;
+    height: 400px;
+    padding: 118px 0;
+  }
 }
