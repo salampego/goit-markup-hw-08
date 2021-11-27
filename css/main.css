@@ -388,6 +388,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  background-image: url(../images/hero-phone.jpg);
 }
 
 .hero-heading {
@@ -405,12 +406,15 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+  .hero {
+    height: 400px;
+  }
   .hero-heading {
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-    width: 360px;
+    width: 320px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;
@@ -429,6 +433,7 @@ button {
     font-weight: 700;
     line-height: 1.32;
     letter-spacing: 0.03em;
+    min-width: 320px;
   }
 }
 
@@ -438,9 +443,9 @@ button {
   }
 }
 
-@media not all, (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen, (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone2x.jpg);
   }
 }
 
@@ -699,7 +704,7 @@ button {
   margin-right: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
   .features-list {
     display: flex;
     flex-direction: column;
@@ -715,10 +720,46 @@ button {
     margin-bottom: 0;
   }
   .features-block {
-    width: 100%;
+    max-width: 450px;
   }
   .features-heading {
+    width: 0;
     text-align: center;
+  }
+  .features-paragraph {
+    width: 0;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .features-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .features .item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .features .item:last-child {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+  .features-block {
+    margin-left: 0;
+    margin-right: 0;
+    width: 480px;
+  }
+  .features-heading {
+    margin-left: 0;
+    margin-right: 0;
+    width: 270px;
+  }
+  .features-paragraph {
+    margin-left: 0;
+    margin-right: 0;
+    width: 450px;
   }
 }
 
