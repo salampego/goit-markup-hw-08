@@ -344,6 +344,9 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+  .header__container {
+    justify-content: space-between;
+  }
   .header-nav__list {
     display: none;
   }
@@ -371,7 +374,8 @@ button {
   text-align: center;
   background-color: var(--background-hero);
   letter-spacing: 0.06em;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
 }
 
@@ -675,6 +679,12 @@ button {
 }
 
 @media screen and (max-width: 767px) {
+  .features .item {
+    margin-right: 0;
+  }
+  .features .item:last-child {
+    margin-right: 0;
+  }
   .features-list {
     display: flex;
     flex-direction: column;
@@ -690,13 +700,10 @@ button {
     margin-bottom: 0;
   }
   .features-block {
-    width: 450px;
+    width: 100%;
   }
   .features-heading {
     text-align: center;
-  }
-  .features-paragraph {
-    width: 450px;
   }
 }
 

@@ -43,6 +43,7 @@
   }
 }
 @media screen and (max-width: 767px) {
+  }
   .features-list {
     display: flex;
     flex-direction: column;
@@ -58,12 +59,11 @@
     }
   }
   .features-block {
-    width: 450px;
+    width: 100%;
   }
   .features-heading {
     text-align: center;
   }
   .features-paragraph {
-    width: 450px;
   }
 }
