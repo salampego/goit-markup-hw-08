@@ -379,6 +379,7 @@ button {
 }
 
 .hero {
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
@@ -415,6 +416,7 @@ button {
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;
+    max-width: 360px;
   }
   .hero-container {
     padding-top: 118px;
@@ -429,7 +431,7 @@ button {
     font-weight: 700;
     line-height: 1.32;
     letter-spacing: 0.03em;
-    min-width: 0;
+    max-width: 360px;
   }
 }
 
@@ -439,16 +441,9 @@ button {
   }
 }
 
-@media screen, (min-resolution: 192dpi), (min-resolution: 2dppx), (min-device-pixel-ratio: 2), (max-width: 767px) {
+@media screen, (min-resolution: 192dpi), (min-resolution: 2dppx), (min-device-pixel-ratio: 2) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone2x.jpg);
-    max-width: 480px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone.jpg);
     max-width: 480px;
   }
 }
@@ -666,7 +661,6 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -695,7 +689,6 @@ button {
 }
 
 .features-paragraph {
-  width: 270px;
   color: var(--paragraph-color);
   line-height: 1.71;
 }
@@ -708,67 +701,38 @@ button {
   margin-right: 0;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 767px) {
+  .features .item {
+    margin-right: 0;
+  }
   .features-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .features .item {
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
-  .features .item:last-child {
-    margin-right: 30px;
-    margin-bottom: 0;
-  }
   .features-block {
-    max-width: 450px;
+    max-width: 100%;
   }
   .features-heading {
-    width: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     text-align: center;
   }
   .features-paragraph {
-    width: 0;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .features-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .features .item {
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
-  .features .item:last-child {
-    margin-right: 30px;
-    margin-bottom: 0;
-  }
-  .features-block {
-    margin-left: 0;
-    margin-right: 0;
-    width: 480px;
-  }
-  .features-heading {
-    margin-left: 0;
-    margin-right: 0;
-    width: 270px;
-  }
-  .features-paragraph {
-    margin-left: 0;
-    margin-right: 0;
-    width: 450px;
+    width: 100%;
   }
 }
 
 .work {
   padding-top: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .work {
+    display: none;
+  }
 }
 
 .work-list {
@@ -819,6 +783,12 @@ button {
   display: flex;
 }
 
+@media screen and (max-width: 767px) {
+  .team-list {
+    flex-direction: column;
+  }
+}
+
 .team-block {
   padding: 30px 0;
 }
@@ -836,6 +806,14 @@ button {
   margin-left: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .team-item {
+    margin-left: 0;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}
+
 .team-heading {
   margin-bottom: 50px;
   margin-top: 0;
@@ -844,6 +822,13 @@ button {
   line-height: 1.16;
   text-align: center;
   color: var(--heading-color);
+}
+
+@media screen and (max-width: 767px) {
+  .team-heading {
+    font-size: 28px;
+    line-height: 1.17;
+  }
 }
 
 .team-name {
@@ -885,8 +870,21 @@ button {
   text-align: center;
 }
 
+@media screen and (max-width: 767px) {
+  .reg-customer-heading {
+    font-size: 28px;
+    line-height: 1.17;
+  }
+}
+
 .list-customer {
   display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .list-customer {
+    flex-wrap: wrap;
+  }
 }
 
 .reg_customer_item {
@@ -897,6 +895,13 @@ button {
 
 .reg_customer_item:last-child {
   margin-right: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .reg_customer_item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-bottom: 30px;
+  }
 }
 
 .reg-customer-link {
@@ -931,6 +936,14 @@ button {
   align-items: baseline;
 }
 
+@media screen and (max-width: 767px) {
+  .footer-container {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 .contact-footer {
   color: var(--contact-footer);
   font-size: 14px;
@@ -948,12 +961,28 @@ button {
   margin-right: 70px;
 }
 
+@media screen and (max-width: 767px) {
+  .footer-address {
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .footer-address-link {
   color: var(--background-team);
 }
 
 .social-footer {
   margin-right: 93px;
+}
+
+@media screen and (max-width: 767px) {
+  .social-footer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
 }
 
 .contact-footer .item + .item {
@@ -982,10 +1011,24 @@ button {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 767px) {
+  .footer-email {
+    width: 100%;
+  }
+}
+
 .footer-email-input {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-email-input {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .input-email-footer {
@@ -1008,6 +1051,13 @@ button {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 767px) {
+  .input-email-footer {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 .footer-email-submit {
   display: flex;
   align-items: center;
@@ -1025,6 +1075,12 @@ button {
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--logo-footer);
+}
+
+@media screen and (max-width: 767px) {
+  .footer-email-submit {
+    width: 100%;
+  }
 }
 
 .footer-icon-send {
@@ -1144,16 +1200,16 @@ button {
 }
 
 .container {
-  width: 1200px;
+  max-width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
   .container {
-    max-width: 480px;
+    max-width: 1200px;
   }
 }
 

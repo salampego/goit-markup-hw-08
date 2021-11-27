@@ -5,9 +5,16 @@
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+    line-height: 1.17;
+  }
 }
 .list-customer {
   display: flex;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 }
 .reg_customer_item {
   margin-right: 30px;
@@ -16,6 +23,10 @@
 
   &:last-child {
     margin-right: 0px;
+  }
+  @media screen and (max-width: 767px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-bottom: 30px;
   }
 }
 
