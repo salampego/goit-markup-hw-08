@@ -197,7 +197,6 @@ button {
 }
 
 .header__burger-btn {
-  position: absolute;
   right: 15px;
   top: 10px;
   background-color: transparent;
@@ -206,6 +205,7 @@ button {
   width: 40px;
   height: 40px;
   padding: 0;
+  margin-left: 0;
 }
 
 .header__icon-burger {
@@ -344,9 +344,6 @@ button {
 }
 
 @media screen and (max-width: 767px) {
-  .header__container {
-    justify-content: space-between;
-  }
   .header-nav__list {
     display: none;
   }
@@ -368,12 +365,9 @@ button {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 1600px;
-  padding: 200px 0;
   text-align: center;
   background-color: var(--background-hero);
   letter-spacing: 0.06em;
@@ -406,14 +400,22 @@ button {
     font-size: 26px;
     line-height: 1.62;
   }
+  .hero-container {
+    max-width: 480px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 
-@media not all, (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media all, screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(/images/hero-phone.jpg);
-    margin: 0 auto;
-    height: 400px;
-    padding: 118px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-background.jpg);
+  }
+}
+
+@media not all, (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-phone.jpg);
   }
 }
 
@@ -1084,14 +1086,7 @@ button {
 
 @media screen and (max-width: 767px) {
   .container {
-    position: relative;
-    width: 480px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-top: 16px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 480px;
   }
 }
 
@@ -1107,6 +1102,7 @@ button {
   font-size: 26px;
   line-height: 1.19;
   color: var(--logo-basic);
+  padding: 16px 0;
 }
 
 .header__logo .header-logo__item {

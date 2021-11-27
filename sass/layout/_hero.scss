@@ -1,20 +1,14 @@
 .hero {
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/hero-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 1600px;
-  padding: 200px 0;
   text-align: center;
   background-color: var(--background-hero);
   letter-spacing: 0.06em;
   margin: 0 auto;
   width: 100%;
 }
+
 .hero-heading {
   margin-top: 0;
   margin-left: auto;
@@ -40,15 +34,29 @@
     font-size: 26px;
     line-height: 1.62;
   }
+  .hero-container {
+    max-width: 480px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
-@media not all,
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
+@media all,
+  screen and (min-width: 1200px) and (min-resolution: 192dpi),
+  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(/images/hero-phone.jpg);
-    margin: 0 auto;
-    height: 400px;
-    padding: 118px 0;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/images/hero-background.jpg);
+  }
+}
+@media not all, (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(/images/hero-phone.jpg);
   }
 }

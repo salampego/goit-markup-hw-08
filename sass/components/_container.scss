@@ -7,13 +7,6 @@
 }
 @media screen and (max-width: 767px) {
   .container {
-    position: relative;
-    width: 480px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-top: 16px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 480px;
   }
 }
