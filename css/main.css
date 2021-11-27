@@ -379,7 +379,6 @@ button {
 }
 
 .hero {
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
@@ -387,8 +386,8 @@ button {
   letter-spacing: 0.06em;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
   background-image: url(../images/hero-phone.jpg);
+  background-size: 480px auto;
 }
 
 .hero-heading {
@@ -440,16 +439,16 @@ button {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen, (min-resolution: 192dpi), (min-resolution: 2dppx), (min-device-pixel-ratio: 2), (max-width: 767px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone2x.jpg);
     max-width: 480px;
   }
 }
 
-@media screen, (min-resolution: 192dpi), (min-resolution: 2dppx), (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone.jpg);
     max-width: 480px;
   }
 }
