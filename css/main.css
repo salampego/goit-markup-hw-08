@@ -73,11 +73,17 @@ button {
   background-color: var(--logo-footer);
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
+  width: 100%;
 }
 
 .header__container {
   display: flex;
   align-items: center;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header-nav__list .header-nav__item + .header-nav__item {
@@ -345,7 +351,12 @@ button {
 
 @media screen and (max-width: 767px) {
   .header__container {
+    width: 100%;
     justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .header-nav__list {
     display: none;
@@ -408,6 +419,16 @@ button {
     max-width: 480px;
     padding-top: 118px;
     padding-bottom: 118px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-heading {
+    margin: 0 auto 30px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.32;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -679,12 +700,6 @@ button {
 }
 
 @media screen and (max-width: 767px) {
-  .features .item {
-    margin-right: 0;
-  }
-  .features .item:last-child {
-    margin-right: 0;
-  }
   .features-list {
     display: flex;
     flex-direction: column;

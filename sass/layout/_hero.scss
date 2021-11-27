@@ -41,6 +41,15 @@
     padding-bottom: 118px;
   }
 }
+@media screen and (max-width: 480px) {
+  .hero-heading {
+    margin: 0 auto 30px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.32;
+    letter-spacing: 0.03em;
+  }
+}
 @media all,
   screen and (min-width: 1200px) and (min-resolution: 192dpi),
   screen and (min-width: 1200px) and (min-resolution: 2dppx) {
