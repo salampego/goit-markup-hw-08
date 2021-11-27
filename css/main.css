@@ -396,7 +396,6 @@ button {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 696px;
   color: var(--heading-color-hero);
   font-weight: 900;
   font-size: 44px;
@@ -414,13 +413,11 @@ button {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-    width: 320px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;
   }
   .hero-container {
-    max-width: 480px;
     padding-top: 118px;
     padding-bottom: 118px;
   }
@@ -433,7 +430,7 @@ button {
     font-weight: 700;
     line-height: 1.32;
     letter-spacing: 0.03em;
-    min-width: 320px;
+    min-width: 0;
   }
 }
 
@@ -443,9 +440,17 @@ button {
   }
 }
 
-@media screen, (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone.jpg);
+    max-width: 480px;
+  }
+}
+
+@media screen, (min-resolution: 192dpi), (min-resolution: 2dppx), (max-width: 767px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone2x.jpg);
+    max-width: 480px;
   }
 }
 
