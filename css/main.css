@@ -761,6 +761,7 @@ button {
     margin-left: -30px;
     flex-wrap: wrap;
     flex-direction: row;
+    align-items: stretch;
   }
 }
 
@@ -917,8 +918,21 @@ button {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
 .team-block {
   padding: 30px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .team-block {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 .team-item {
@@ -939,6 +953,19 @@ button {
     margin-left: 0;
     margin-bottom: 30px;
     width: 100%;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-item {
+    margin-bottom: 30px;
+    width: 100%;
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+  }
+  .team-item:first-child {
+    margin-left: 30px;
   }
 }
 
@@ -1015,19 +1042,32 @@ button {
   }
 }
 
-.reg_customer_item {
-  margin-right: 30px;
-  width: 170px;
-  height: 92px;
+@media screen and (min-width: 768px) {
+  .list-customer {
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.reg_customer_item:last-child {
-  margin-right: 0px;
+.reg_customer_item {
+  width: 170px;
+  height: 92px;
 }
 
 @media screen and (max-width: 767px) {
   .reg_customer_item {
     flex-basis: calc(100% / 2 - 30px);
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .reg_customer_item {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
     margin-bottom: 30px;
   }
 }
@@ -1129,6 +1169,10 @@ button {
   margin-right: 0;
 }
 
+.footer-container__tablet {
+  display: flex;
+}
+
 .social-heading {
   margin-bottom: 20px;
   font-weight: 700;
@@ -1184,6 +1228,12 @@ button {
   .input-email-footer {
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .input-email-footer {
+    width: 100%;
   }
 }
 

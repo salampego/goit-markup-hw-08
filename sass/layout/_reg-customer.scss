@@ -15,17 +15,25 @@
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
   }
+  @media screen and(min-width:768px) {
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .reg_customer_item {
-  margin-right: 30px;
   width: 170px;
   height: 92px;
 
-  &:last-child {
-    margin-right: 0px;
-  }
   @media screen and (max-width: 767px) {
     flex-basis: calc(100% / 2 - 30px);
+    margin-bottom: 30px;
+  }
+  @media screen and(min-width:768px) {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
     margin-bottom: 30px;
   }
 }
