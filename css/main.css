@@ -181,7 +181,10 @@ button {
 
 @media screen and (min-width: 780px) {
   .header-contact__item {
-    margin-right: 0;
+    margin-right: 0px;
+  }
+  .header-contact__item:last-child {
+    margin-right: 15px;
   }
   .header-contact__item:first-child {
     margin-bottom: 10px;
@@ -413,6 +416,25 @@ button {
   background-size: 480px auto;
 }
 
+@media screen and (max-width: 767px) {
+  .hero {
+    height: 400px;
+  }
+}
+
+@media all, screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background.jpg);
+  }
+}
+
+@media screen, (min-resolution: 192dpi), (min-resolution: 2dppx), (min-device-pixel-ratio: 2) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone2x.jpg);
+    max-width: 480px;
+  }
+}
+
 .hero-heading {
   margin-top: 0;
   margin-left: auto;
@@ -427,9 +449,6 @@ button {
 }
 
 @media screen and (max-width: 767px) {
-  .hero {
-    height: 400px;
-  }
   .hero-heading {
     margin-top: 0;
     margin-left: auto;
@@ -439,10 +458,6 @@ button {
     font-size: 26px;
     line-height: 1.62;
     max-width: 360px;
-  }
-  .hero-container {
-    padding-top: 118px;
-    padding-bottom: 118px;
   }
 }
 
@@ -457,16 +472,10 @@ button {
   }
 }
 
-@media all, screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background.jpg);
-  }
-}
-
-@media screen, (min-resolution: 192dpi), (min-resolution: 2dppx), (min-device-pixel-ratio: 2) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-phone2x.jpg);
-    max-width: 480px;
+@media screen and (max-width: 767px) {
+  .hero-container {
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
 }
 
@@ -620,6 +629,7 @@ button {
   .contract-modal {
     font-size: 12px;
     line-height: 1.16;
+    flex-wrap: wrap;
   }
 }
 

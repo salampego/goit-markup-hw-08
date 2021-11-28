@@ -9,6 +9,30 @@
   margin-right: auto;
   background-image: url(../images/hero-phone.jpg);
   background-size: 480px auto;
+  @media screen and (max-width: 767px) {
+    height: 400px;
+  }
+  @media all,
+    screen and (min-width: 1200px) and (min-resolution: 192dpi),
+    screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-background.jpg);
+  }
+
+  @media screen,
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx),
+    (min-device-pixel-ratio: 2) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-phone2x.jpg);
+    max-width: 480px;
+  }
 }
 
 .hero-heading {
@@ -23,12 +47,7 @@
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-@media screen and (max-width: 767px) {
-  .hero {
-    height: 400px;
-  }
-  .hero-heading {
+  @media screen and (max-width: 767px) {
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
@@ -38,13 +57,7 @@
     line-height: 1.62;
     max-width: 360px;
   }
-  .hero-container {
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .hero-heading {
+  @media screen and (max-width: 480px) {
     margin: 0 auto 30px;
     font-size: 24px;
     font-weight: 700;
@@ -53,28 +66,10 @@
     max-width: 360px;
   }
 }
-@media all,
-  screen and (min-width: 1200px) and (min-resolution: 192dpi),
-  screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero {
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/hero-background.jpg);
-  }
-}
 
-@media screen,
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx),
-  (min-device-pixel-ratio: 2) {
-  .hero {
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/hero-phone2x.jpg);
-    max-width: 480px;
+.hero-container {
+  @media screen and (max-width: 767px) {
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
 }
