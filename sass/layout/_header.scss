@@ -32,7 +32,7 @@
 
 .header-nav__item--current {
   position: relative;
-  color: var(--header-nav-hover);
+  color: var(--accent-color);
 }
 .header-nav__item {
   position: relative;
@@ -80,6 +80,9 @@
   justify-content: center;
   align-items: center;
   align-self: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
 }
 .header-contact__item {
   fill: #757575;
@@ -92,6 +95,9 @@
   &:hover,
   &:focus {
     fill: var(--accent-color);
+  }
+  @media screen and (min-width: 780px) {
+    margin-right: 0;
   }
 }
 .header-contact__link {
@@ -111,6 +117,9 @@
   &:focus {
     fill: var(--accent-color);
     color: var(--contact-hover);
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0;
   }
 }
 .header-contact__icon-email {

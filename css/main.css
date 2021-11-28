@@ -108,7 +108,7 @@ button {
 
 .header-nav__item--current {
   position: relative;
-  color: var(--header-nav-hover);
+  color: var(--accent-color);
 }
 
 .header-nav__item {
@@ -160,6 +160,12 @@ button {
   align-self: center;
 }
 
+@media screen and (min-width: 768px) {
+  .header-contact__list {
+    flex-direction: column;
+  }
+}
+
 .header-contact__item {
   fill: #757575;
   margin-right: 30px;
@@ -171,6 +177,12 @@ button {
 
 .header-contact__item:hover, .header-contact__item:focus {
   fill: var(--accent-color);
+}
+
+@media screen and (min-width: 780px) {
+  .header-contact__item {
+    margin-right: 0;
+  }
 }
 
 .header-contact__link {
@@ -189,6 +201,12 @@ button {
 .header-contact__link:hover, .header-contact__link:focus {
   fill: var(--accent-color);
   color: var(--contact-hover);
+}
+
+@media screen and (min-width: 768px) {
+  .header-contact__link {
+    padding: 0;
+  }
 }
 
 .header-contact__icon-email {
@@ -1280,6 +1298,12 @@ button {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .container {
+    max-width: 780px;
   }
 }
 
