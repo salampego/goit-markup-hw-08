@@ -23,18 +23,21 @@
   </head>
   <body>
     <!-- header -->
-    <header class="header">
-      <div class="header__container container">
+     <header class="header">
+      <div class="header__container">
+        <a href="./index.html" class="header__logo link"
+          >Web<span class="header-logo__item">Studio</span></a
+        >
+
         <nav class="header__nav">
-          <a href="./index.html" class="header__logo link"
-            >Web<span class="header-logo__item">Studio</span></a
-          >
           <ul class="header-nav__list">
             <li class="header-nav__item">
-              <a href="./index.html" class="link header-nav__link">Студия</a>
+              <a href="./index.html" class="link header-nav__link"
+                >Студия</a
+              >
             </li>
             <li class="header-nav__item">
-              <a href="./portfolio.html" class="link header-nav__link--current"
+              <a href="./portfolio.html" class="header-nav__link--current link"
                 >Портфолио</a
               >
             </li>
@@ -63,8 +66,65 @@
             >
           </li>
         </ul>
+        <button class="header__burger-btn" data-menu-open>
+          <svg class="header__icon-burger">
+            <use href="./images/burger.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <div class="header-menu__backdrop is-open" data-menu>
+          <button class="header-menu__close" data-menu-close>
+            <svg class="header-menu__close-icon">
+              <use href="./images/close_backdrop.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="menu-nav__list">
+            <li class="menu-nav__item">
+              <a href="" class="menu-nav__link link">Студия</a>
+            </li>
+            <li class="menu-nav__item">
+              <a href="./portfolio.html" class="link menu-nav__link"
+                >Портфолио</a
+              >
+            </li>
+            <li class="menu-nav__item">
+              <a href="" class="menu-nav__link link">Контакты</a>
+            </li>
+          </ul>
+
+          <div class="menu-feedback">
+            <ul class="menu-contact__list">
+              <li class="menu-contact__item">
+                <a href="tel:+380961111111" class="menu-contact__link link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="menu-contact__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="menu-contact__link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="menu-social-link">
+              <li class="menu-social-link__item">
+                <a href="" class="menu-social-link__link link">Instagram</a>
+              </li>
+              <li class="menu-social-link__item">
+                <a href="" class="menu-social-link__link link">Twitter</a>
+              </li>
+              <li class="menu-social-link__item">
+                <a href="" class="menu-social-link__link link">Facebook</a>
+              </li>
+              <li class="menu-social-link__item">
+                <a href="" class="menu-social-link__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
+    <main>
     <main>
       <section class="portfolio section">
         <div class="container">
@@ -392,16 +452,15 @@
         </div>
         <div class="footer-email">
           <h2 class="social-heading">Подпишитесь на рассылку</h2>
-          <div class="footer-email-input">
-            <form action="">
-              <input
-                type="email"
-                placeholder="E-mail"
-                id="footer-email"
-                class="input-email-footer"
-              />
-            </form>
-            <button type="submit" class="footer-email-submit">
+          <form class="footer-email-input">
+            <input
+              type="email"
+              placeholder="E-mail"
+              id="footer-email"
+              class="input-email-footer"
+            />
+
+            <button type="submit" class="button">
               Подписаться
               <svg class="footer-icon-send">
                 <use
@@ -409,9 +468,10 @@
                 ></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
