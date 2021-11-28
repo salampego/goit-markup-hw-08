@@ -29,12 +29,21 @@
   line-height: 1.14;
   font-weight: 700;
   text-transform: uppercase;
+  @media screen and(max-width:767px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 .features-paragraph {
-  // width: 270px;
+  width: 270px;
 
   color: var(--paragraph-color);
   line-height: 1.71;
+  @media screen and(max-width:767px) {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .features .item {
   margin-right: 30px;
