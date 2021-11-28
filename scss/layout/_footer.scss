@@ -1,0 +1,30 @@
+.section-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--primary_bg_color);
+}
+
+.footer__container {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    text-align: left;
+  }
+}
+.footer__container-tablet {
+  @media screen and (max-width: 479px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,13 @@
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
+  font-family: Raleway, sans-serif;
+  @include font(26px, 700, 1.19, 0.03em);
+  text-decoration: none;
+  & .web {
+    color: var(--secondary-accent-color);
+  }
+  & .studio {
+    color: #ffffff;
+  }
+}

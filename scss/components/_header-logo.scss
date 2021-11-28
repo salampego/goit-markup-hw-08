@@ -1,0 +1,25 @@
+.header__logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+
+  font-family: Raleway, sans-serif;
+  @include font(26px, 700, 1.19, 0.03em);
+  color: var(--primary-text-color);
+  text-decoration: none;
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+.header__logo-web {
+  font-family: Raleway, sans-serif;
+  @include font(26px, 700, 1.19, 0.03em);
+  color: var(--secondary-accent-color);
+  text-decoration: none;
+}
